@@ -1,0 +1,12 @@
+<h1>Train Schedules</h1>
+<p>Source: {{ src }}</p>
+<p>Destination: {{ des }}</p>
+<p>Date: {{ date }}</p>
+
+<ul>
+    {% for train in trains %}
+      <li>{{ train.tno }} - {{ train.tname }}</li>
+    {% empty %}
+      <li>No trains available.</li>
+    {% endfor %}  
+</ul>

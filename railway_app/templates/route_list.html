@@ -1,0 +1,11 @@
+<h1>Route List</h1>
+<ul>
+    {% for route in routes %}
+       <li><a href="{%url 'railway_app:route_detail' rid=route.tno %}">{{ route.rid }}</a></li>
+    {% empty %}
+      <li>No routes available.</li>
+
+    {% endfor %}  
+
+
+</ul>

@@ -1,0 +1,11 @@
+<h1>Train List</h1>
+<ul>
+    {% for train in trains %}
+       <li><a href="{%url 'railway_app:train_detail' tno=train.tno %}">{{ train.tname }}</a></li>
+    {% empty %}
+      <li>No trains available.</li>
+
+    {% endfor %}  
+
+
+</ul>

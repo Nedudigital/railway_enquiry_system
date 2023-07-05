@@ -1,0 +1,8 @@
+<h1>Payment List</h1>
+<ul>
+  {% for payment in payments %}
+    <li><a href="{% url 'railway_app:payment_detail' pnr=payment.pnr %}">Payment for PNR: {{ payment.pnr }}</a></li>
+  {% empty %}
+    <li>No payments available.</li>
+  {% endfor %}
+</ul>

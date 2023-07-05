@@ -1,0 +1,8 @@
+<h1>Book your Ticket for Train {{ tno }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Ticket</button>
+    
+</form>
